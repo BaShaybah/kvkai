@@ -1,0 +1,38 @@
+<UIButton>:
+    #md_bg_color:1,0,1,1
+    size_hint:0.9,None
+    height:"50dp"
+    text_color:"fff"
+    bg_color:hex("#6c63ff")
+
+    canvas.before:
+        Color:
+            rgba:0,0,0,.3
+        BoxShadow:
+            pos:self.pos
+            size:self.size
+            offset:0,-4
+            blur_radius:15
+            border_radius:[8]*4
+            spread_radius:-4,0
+        Color:
+            rgba:root.bg_color
+        RoundedRectangle:
+            pos:self.pos
+            size:self.size
+            radius:[8,]
+        
+
+    MDLabel:
+        base_direction:"rtl"
+        text_language:"ar"
+        pos_hint:{"center_x":0.5, "center_y":0.5}
+        text:f"[color={root.text_color}][font=assets/font/Nasalization.ttf]{root.text}[/font][/color]"
+        halign:"center"
+        markup:True
+        #mn:print(dir(self.properties))
+
+
+
+
+

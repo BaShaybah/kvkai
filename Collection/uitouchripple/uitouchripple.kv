@@ -1,0 +1,27 @@
+<UITouchRipple>:
+    size_hint:0.9,None
+    height:"50dp"
+    text_color:"fff"
+    #bg_color:0,.6,.6,1
+    radius:[4]*4
+    canvas:
+        Color:
+            rgba:1,0,0,0.3
+        RoundedRectangle:
+            pos:self.pos
+            size:self.size
+            radius:[5,]
+
+        Color:
+            rgba:self.color
+        RoundedRectangle:
+            group:"touchripple"
+            pos:self.poser
+            size:self.sizer
+            radius:[self.height/2,] if self.sizer[1] < self.height else self.radius
+
+        
+        
+        
+            
+        
